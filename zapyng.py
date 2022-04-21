@@ -25,8 +25,8 @@ for item in folder:
 	if item.endswith(".mp4"):
 		clip = mp.VideoFileClip(item)
 		clip = clip.resize(width=1920)
-		if clip.duration>int(query2):
-			clip = clip.subclip(0,int(query2))
+		if clip.duration>float(query2):
+			clip = clip.subclip(0,float(query2))
 		clips.append(clip)
 
 for item in folder:
